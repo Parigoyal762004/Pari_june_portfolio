@@ -25,11 +25,11 @@ const roles = [
     title: "Technology, Marketing and Operations Associate",
     org: "Akroventures",
     dates: "Apr 2026 to Present",
-    lead: "First hire, empty slate, build the whole digital operation.",
+    lead: "First hire, empty slate. I built the engine that finds the deals.",
     points: [
-      "Built the entire digital operation from scratch, including a no code website, lead generation tooling, and automated email outreach.",
-      "Built a daily content pipeline that pulls from news sources and surfaces ready to post options, saving close to 10 hours a week.",
-      "Building an investment sourcing system that pulls from Crunchbase and Google News, filters for investable companies, and fires the first outreach email on its own.",
+      "Built a deal-flow engine that pulls from Crunchbase and Google News, scores companies against the fund's thesis, and fires the first founder outreach on its own. It sourced multiple live deals, including one worth up to twenty crore, the largest in the pipeline.",
+      "Built a daily content pipeline that drafts ready to post options from the day's news, turning a daily scramble into a ten minute morning review and saving close to 10 hours a week.",
+      "Stood up the whole digital operation solo, site, lead-gen tooling, and a personalized outreach engine, and own the decisions on what is worth building next.",
     ],
   },
   {
@@ -92,15 +92,18 @@ export default function About() {
                 I do not get stuck in one corner of a problem.
               </h1>
               <p className="mb-4 text-[clamp(1.05rem,2vw,1.3rem)] text-ink-soft">
-                I am a Computer Science student who spent the last few months
-                building agentic AI systems that real clients actually use,
-                across marketing, lead generation, and operations.
+                I am a final-year Computer Science student, but the part that
+                matters is what I have shipped: agentic AI systems that real
+                teams depend on every day, across product, marketing, sourcing,
+                and operations.
               </p>
               <p>
-                I have worked across product, marketing, and AI automation, so I
-                care about ROI, not just output. I ask a lot of questions,
-                especially when I do not understand something, because I would
-                rather look less smart in the room than build the wrong thing.
+                I think in outcomes, not features. I care what changed because of
+                the thing I built, a deal sourced, a week of work removed, a
+                conversation booked. I make the calls on what to build and what
+                to cut, I am comfortable making the case to founders and
+                leadership, and I would rather ask the dumb question in the room
+                than ship the wrong thing.
               </p>
             </div>
           </Reveal>
