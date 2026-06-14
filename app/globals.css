@@ -57,5 +57,5 @@ body::before {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .animate-pagein, .animate-marquee, .animate-pulse-ring { animation: none; }
+  .animate-pagein { animation: none; }
 }
