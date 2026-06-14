@@ -6,40 +6,40 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Pari Goyal is a Computer Science student building agentic AI systems across product, marketing, and operations. Experience at Oyelabs, Akroventures, Halo Interiors, and ScoutNexa.",
+    "Pari Goyal helps early-stage companies raise capital and scale from zero. Closed a fundraising mandate worth up to ₹20 crore, built GTM and AI systems from scratch. Experience at Akroventures, Oyelabs, Halo Interiors, and ScoutNexa.",
 };
 
 const roles = [
   {
+    title: "First hire · Akroventures",
+    org: "Akroventures",
+    dates: "Apr 2026 to Present",
+    lead: "Built the tech from zero. Closed a mandate that moved real capital.",
+    points: [
+      "Helped close a fundraising mandate worth up to ₹20 crore, owning the client relationship and the moving parts that turn a pitch into committed capital.",
+      "Built the entire tech and GTM stack from scratch: a deal-flow engine that sources investable companies on its own, a personalized outreach system, lead-gen tooling, and the site you are reading this on.",
+      "Built a daily content pipeline that turned a daily scramble into a ten-minute morning review and saved close to 10 hours a week. I own the call on what gets built next.",
+    ],
+  },
+  {
     title: "Agentic AI Intern",
     org: "Oyelabs",
     dates: "Mar 2026 to May 2026",
-    lead: "Building agents that other people end up depending on.",
+    lead: "Built agents other people ended up depending on.",
     points: [
       "Built AI agents for live client projects on n8n, Supabase, and large language model APIs.",
-      "Designed a global prompt framework that cross checked SOPs before any workflow ran, which saved the manager a full day every week of manual validation.",
-      "Owned prompt engineering across several client projects and kept the documentation clean enough that handoffs worked the first time.",
+      "Designed a global prompt framework that cross-checked SOPs before any workflow ran, saving the manager a full day every week of manual validation.",
+      "Owned prompt engineering across several client projects and kept the docs clean enough that handoffs worked the first time.",
     ],
   },
   {
-    title: "Technology, Marketing and Operations Associate",
-    org: "Akroventures",
-    dates: "Apr 2026 to Present",
-    lead: "First hire, empty slate. I built the engine that finds the deals.",
-    points: [
-      "Built a deal-flow engine that pulls from Crunchbase and Google News, scores companies against the fund's thesis, and fires the first founder outreach on its own. It sourced multiple live deals, including one worth up to twenty crore, the largest in the pipeline.",
-      "Built a daily content pipeline that drafts ready to post options from the day's news, turning a daily scramble into a ten minute morning review and saving close to 10 hours a week.",
-      "Stood up the whole digital operation solo, site, lead-gen tooling, and a personalized outreach engine, and own the decisions on what is worth building next.",
-    ],
-  },
-  {
-    title: "Marketing and AI Automation Intern",
+    title: "Marketing & AI Automation Intern",
     org: "Halo Interiors LLC",
     dates: "Nov 2025",
-    lead: "Take the manual work out of video, then write it all down.",
+    lead: "Took the manual work out of video, then wrote it all down.",
     points: [
-      "Automated cross platform video processing with AI workflows and removed most of the manual steps.",
-      "Stress tested Convex, Supabase, and Firebase to find what would actually hold at scale.",
+      "Automated cross-platform video processing with AI workflows and cut out most of the manual steps.",
+      "Stress-tested Convex, Supabase, and Firebase to find what would actually hold at scale.",
       "Documented what broke and what worked, so the next person did not start from zero.",
     ],
   },
@@ -47,11 +47,11 @@ const roles = [
     title: "Product Intern",
     org: "ScoutNexa",
     dates: "Feb 2026 to Mar 2026",
-    lead: "Ship fast, talk to users, learn how early stage really moves.",
+    lead: "Shipped fast, talked to users, learned how early stage really moves.",
     points: [
       "Researched competitors across Crunchbase to sharpen the product problem statement.",
-      "Shipped an MVP in a few weeks with no code tools, talked to early users, and iterated quickly.",
-      "The founder shut the company down, which taught me more about early stage speed and focus than a clean win would have.",
+      "Shipped an MVP in a few weeks with no-code tools, talked to early users, and iterated quickly.",
+      "The founder shut the company down, which taught me more about focus and speed than a clean win would have.",
     ],
   },
 ];
@@ -71,39 +71,59 @@ const lessons = [
   },
 ];
 
+const wants = [
+  {
+    label: "The role",
+    value: "GTM, BD, or founder's office",
+    note: "Where strategy and execution sit in the same chair.",
+    accent: "#5FC7A4",
+  },
+  {
+    label: "The company",
+    value: "Funded, early-stage, moving fast",
+    note: "Chaos is fine. I work well in it.",
+    accent: "#FFC94D",
+  },
+  {
+    label: "The bar",
+    value: "Where my thinking actually matters",
+    note: "Not tickets. Outcomes I get to own.",
+    accent: "#FA6781",
+  },
+];
+
 export default function About() {
+  const accents = ["#5FC7A4", "#FA6781", "#C7B4F0", "#FFC94D"];
   return (
     <>
       <main>
         <section className="px-[clamp(20px,5vw,64px)] pb-16 pt-32">
           <Reveal className="mx-auto grid max-w-content items-center gap-[clamp(32px,6vw,80px)] md:grid-cols-2">
-            <div className="overflow-hidden rounded-[24px] bg-slate-950/40 border border-white/10 shadow-2xl backdrop-blur-md transition-all duration-500 hover:border-teal/30 hover:scale-[1.01]">
+            <div className="overflow-hidden rounded-[24px] bg-cream border border-ink/10 shadow-soft transition-all duration-500 hover:border-teal/40 hover:scale-[1.01]">
               <img
                 src="/media/images/about-portrait.png"
                 alt="Illustrated portrait of Pari Goyal with a root system spreading outward behind her"
-                className="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                className="h-full w-full object-cover"
               />
             </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal">
                 About
               </p>
-              <h1 className="my-5 font-display text-[clamp(2.2rem,5.5vw,3.8rem)] font-normal leading-[1.04] text-white">
-                I do not get stuck in one corner of a problem.
+              <h1 className="my-5 font-display text-[clamp(2.2rem,5.5vw,3.8rem)] font-normal leading-[1.04]">
+                I figure things out, move fast, and close what I start.
               </h1>
-              <p className="mb-5 text-[clamp(1.05rem,2vw,1.3rem)] text-ink-soft leading-relaxed font-light">
-                I am a final-year Computer Science student, but the part that
-                matters is what I have shipped: agentic AI systems that real
-                teams depend on every day, across product, marketing, sourcing,
-                and operations.
+              <p className="mb-5 text-[clamp(1.05rem,2vw,1.3rem)] leading-relaxed">
+                I help early-stage companies figure out how to raise capital and
+                scale from scratch. I have closed real fundraising mandates,
+                built GTM systems from zero, and automated what should never have
+                been manual.
               </p>
-              <p className="text-ink-soft/90 leading-relaxed font-light">
-                I think in outcomes, not features. I care what changed because of
-                the thing I built: a deal sourced, a week of work removed, a
-                conversation booked. I make the calls on what to build and what
-                to cut. I am comfortable making the case to founders and
-                leadership, and I would rather ask the dumb question in the room
-                than ship the wrong thing.
+              <p className="text-ink-soft leading-relaxed">
+                I think in conversations, move in decisions, and execute in code.
+                Right now I am finishing my CS degree while building at
+                Akroventures. Before that: AI agents at Oyelabs, product research
+                at ScoutNexa, video automation at Halo Interiors.
               </p>
             </div>
           </Reveal>
@@ -115,9 +135,9 @@ export default function About() {
             alt="Broken ceramic pieces rejoining with the cracks filled in gold, in the style of kintsugi"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-paper/60 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-paper/55" />
           <div className="relative z-10 mx-auto flex h-full max-w-content items-center px-[clamp(20px,5vw,64px)]">
-            <p className="max-w-[30ch] font-display text-[clamp(1.4rem,3.4vw,2.4rem)] leading-tight text-white">
+            <p className="max-w-[30ch] font-display text-[clamp(1.4rem,3.4vw,2.4rem)] leading-tight">
               Like kintsugi, the things I have broken and rebuilt are the parts I
               am proudest of.
             </p>
@@ -129,36 +149,36 @@ export default function About() {
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal">
               Experience
             </p>
-            <h2 className="mb-14 mt-3 max-w-[20ch] font-display text-[clamp(2rem,5vw,3.4rem)] font-normal leading-[1.04] text-white">
+            <h2 className="mb-14 mt-3 max-w-[20ch] font-display text-[clamp(2rem,5vw,3.4rem)] font-normal leading-[1.04]">
               Four rooms, four problems, the same instinct.
             </h2>
           </Reveal>
-          
-          <div className="mx-auto max-w-content relative border-l border-white/10 pl-6 md:pl-10 ml-2 md:ml-4 space-y-10">
+
+          <div className="mx-auto max-w-content relative border-l border-ink/15 pl-6 md:pl-10 ml-2 md:ml-4 space-y-8">
             {roles.map((r, i) => {
-              const accents = ["#0AD3E8", "#FF2E93", "#8B5CF6", "#FBBF24"];
               const roleAccent = accents[i % accents.length];
               return (
                 <Reveal key={r.org} delay={i * 50} className="relative">
-                  <span 
+                  <span
                     className="absolute -left-[31px] md:-left-[47px] top-2.5 h-4 w-4 rounded-full border-[3px] border-paper z-20 transition-all duration-300 hover:scale-125"
-                    style={{ 
+                    style={{
                       backgroundColor: roleAccent,
-                      boxShadow: `0 0 10px ${roleAccent}`
+                      boxShadow: `0 0 10px ${roleAccent}`,
                     }}
                   />
-                  
-                  <article className="grid grid-cols-1 gap-4 md:grid-cols-[1fr_2fr] bg-white/[0.02] border border-white/5 p-6 md:p-8 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:border-white/10 hover:bg-white/[0.04] hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
+
+                  <article className="grid grid-cols-1 gap-4 md:grid-cols-[1fr_2fr] bg-cream/60 border border-ink/10 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:border-ink/20 hover:bg-cream hover:shadow-soft">
                     <div>
-                      <h3 className="font-display text-[clamp(1.3rem,2.5vw,1.75rem)] leading-tight text-white">
+                      <h3 className="font-display text-[clamp(1.3rem,2.5vw,1.75rem)] leading-tight">
                         {r.title}
                       </h3>
-                      <p className="mt-1 text-sm font-semibold tracking-wide" style={{ color: roleAccent }}>
+                      <p
+                        className="mt-1 text-sm font-semibold tracking-wide"
+                        style={{ color: roleAccent }}
+                      >
                         {r.org}
                       </p>
-                      <p className="mt-2 text-xs text-ink-soft">
-                        {r.dates}
-                      </p>
+                      <p className="mt-2 text-xs text-ink-soft">{r.dates}</p>
                     </div>
                     <div>
                       <p className="mb-3 font-display text-lg text-plum font-medium">
@@ -177,27 +197,64 @@ export default function About() {
           </div>
         </section>
 
-        <section className="bg-paper-2 px-[clamp(20px,5vw,64px)] py-20 border-t border-white/5">
+        <section className="bg-paper-2 px-[clamp(20px,5vw,64px)] py-20 border-t border-ink/10">
+          <Reveal className="mx-auto max-w-content">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-coral">
+              What I am looking for
+            </p>
+            <h2 className="mb-10 mt-3 max-w-[24ch] font-display text-[clamp(2rem,5vw,3.2rem)] font-normal leading-[1.04]">
+              A seat where thinking and execution both count.
+            </h2>
+            <div className="grid gap-4 md:grid-cols-3">
+              {wants.map((w) => (
+                <div
+                  key={w.label}
+                  className="rounded-2xl border-t-2 bg-cream/60 p-6 transition-all duration-300 hover:bg-cream hover:shadow-soft"
+                  style={{ borderTopColor: w.accent }}
+                >
+                  <p
+                    className="text-xs font-semibold uppercase tracking-[0.22em]"
+                    style={{ color: w.accent }}
+                  >
+                    {w.label}
+                  </p>
+                  <p className="mt-3 font-display text-[clamp(1.3rem,2.4vw,1.6rem)] leading-tight">
+                    {w.value}
+                  </p>
+                  <p className="mt-2 text-sm text-ink-soft">{w.note}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-sm text-ink-soft">
+              Targeting ₹14–20 LPA. If the work is real, I am flexible on the
+              rest.
+            </p>
+          </Reveal>
+        </section>
+
+        <section className="px-[clamp(20px,5vw,64px)] py-20">
           <Reveal className="mx-auto grid max-w-content items-center gap-[clamp(32px,6vw,80px)] md:grid-cols-2">
-            <div className="overflow-hidden rounded-[24px] bg-slate-950/40 border border-white/10 shadow-2xl backdrop-blur-md transition-all duration-500 hover:border-teal/30 hover:scale-[1.01]">
+            <div className="overflow-hidden rounded-[24px] bg-cream border border-ink/10 shadow-soft transition-all duration-500 hover:border-teal/40 hover:scale-[1.01]">
               <img
                 src="/media/images/project-scoutnexa-boat.png"
                 alt="A small paper boat at the tideline, partly dissolving into the sand with ripples trailing behind it"
-                className="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
+                className="h-full w-full object-cover"
               />
             </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal">
                 What early stage taught me
               </p>
-              <h2 className="my-3 font-display text-[clamp(2rem,5vw,3.2rem)] font-normal leading-[1.04] text-white">
+              <h2 className="my-3 font-display text-[clamp(2rem,5vw,3.2rem)] font-normal leading-[1.04]">
                 The boat still left ripples.
               </h2>
               <div className="mt-6 grid gap-6">
                 {lessons.map((l) => (
-                  <div key={l.title} className="border-t border-white/10 pt-4">
-                    <h3 className="font-display text-xl text-white">{l.title}</h3>
-                    <p className="mt-1.5 text-ink-soft text-sm leading-relaxed font-light">{l.body}</p>
+                  <div key={l.title} className="border-t border-ink/15 pt-4">
+                    <h3 className="font-display text-xl">{l.title}</h3>
+                    <p className="mt-1.5 text-ink-soft text-sm leading-relaxed">
+                      {l.body}
+                    </p>
                   </div>
                 ))}
               </div>

@@ -99,7 +99,7 @@ export default function Cinema({ panels }: { panels: Panel[] }) {
               aria-label={`Go to ${p.eyebrow}`}
               onClick={() => goTo(p.id)}
               className={`h-2 w-2 rounded-full transition-all duration-350 ${
-                isActive ? "scale-150" : "bg-white/20 hover:bg-white/50 hover:scale-125"
+                isActive ? "scale-150" : "bg-ink/25 hover:bg-ink/50 hover:scale-125"
               }`}
               style={{
                 backgroundColor: isActive ? panelAccent : undefined,
@@ -123,10 +123,17 @@ export default function Cinema({ panels }: { panels: Panel[] }) {
             >
               <div className="mx-auto grid w-full max-w-content items-center gap-[clamp(28px,5vw,72px)] px-[clamp(20px,5vw,64px)] py-28 md:grid-cols-2 relative z-10">
                 <div>
+                  <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-teal/30 bg-cream/50 px-3 py-1 text-xs font-semibold text-teal">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-teal animate-pulse-ring" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-teal" />
+                    </span>
+                    Open to roles
+                  </span>
                   <p className="text-xs font-semibold uppercase tracking-[0.24em]" style={{ color: accent }}>
                     {p.eyebrow}
                   </p>
-                  <h1 className="mt-5 max-w-[15ch] font-display text-[clamp(2.8rem,6vw,4.6rem)] font-normal leading-[0.98] tracking-tight">
+                  <h1 className="mt-4 max-w-[15ch] font-display text-[clamp(2.8rem,6vw,4.6rem)] font-normal leading-[0.98] tracking-tight">
                     {p.heading}
                   </h1>
                   {p.body && (
@@ -139,7 +146,7 @@ export default function Cinema({ panels }: { panels: Panel[] }) {
                 
                 <div>
                   <div 
-                    className="relative mx-auto aspect-[4/3] max-h-[64svh] w-full overflow-hidden rounded-[24px] bg-slate-950/40 backdrop-blur-md shadow-2xl transition-all duration-500 hover:scale-[1.01]"
+                    className="relative mx-auto aspect-[4/3] max-h-[64svh] w-full overflow-hidden rounded-[24px] bg-cream backdrop-blur-md shadow-2xl transition-all duration-500 hover:scale-[1.01]"
                     style={{ 
                       border: `1px solid ${accent}25`,
                       boxShadow: `0 20px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px ${accent}15`
@@ -169,7 +176,7 @@ export default function Cinema({ panels }: { panels: Panel[] }) {
                 <button
                   onClick={() => goTo(panels[1]?.id)}
                   aria-label="Scroll down"
-                  className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 animate-bounce text-2xl text-ink-soft hover:text-white"
+                  className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 animate-bounce text-2xl text-ink-soft hover:text-ink"
                 >
                   &darr;
                 </button>
@@ -216,13 +223,13 @@ export default function Cinema({ panels }: { panels: Panel[] }) {
                       <Link
                         key={l.href}
                         href={l.href}
-                        className="group grid grid-cols-[2.5rem_1fr_auto] items-center gap-4 border border-white/5 bg-white/[0.02] rounded-xl px-4 py-3 backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.05] hover:border-teal/30 hover:shadow-[0_4px_20px_rgba(10,211,232,0.08)]"
+                        className="group grid grid-cols-[2.5rem_1fr_auto] items-center gap-4 border border-ink/10 bg-cream/40 rounded-xl px-4 py-3 backdrop-blur-sm transition-all duration-300 hover:bg-cream/70 hover:border-teal/30 hover:shadow-[0_4px_20px_rgba(95,199,164,0.10)]"
                       >
                         <span className="font-display text-sm text-teal font-semibold">{l.num}</span>
-                        <span className="font-display text-[clamp(1.05rem,2vw,1.25rem)] leading-tight text-white group-hover:text-teal transition-colors">
+                        <span className="font-display text-[clamp(1.05rem,2vw,1.25rem)] leading-tight text-ink group-hover:text-teal transition-colors">
                           {l.title}
                         </span>
-                        <span className="text-lg text-ink-soft transition-all duration-300 group-hover:translate-x-1.5 group-hover:text-white">&rarr;</span>
+                        <span className="text-lg text-ink-soft transition-all duration-300 group-hover:translate-x-1.5 group-hover:text-ink">&rarr;</span>
                       </Link>
                     ))}
                   </div>
@@ -232,7 +239,7 @@ export default function Cinema({ panels }: { panels: Panel[] }) {
 
               <div className={mediaLeft ? "md:order-1" : ""}>
                 <div 
-                  className="relative mx-auto aspect-[4/3] max-h-[64svh] w-full overflow-hidden rounded-[24px] bg-slate-950/40 backdrop-blur-md shadow-2xl transition-all duration-500 hover:scale-[1.01]"
+                  className="relative mx-auto aspect-[4/3] max-h-[64svh] w-full overflow-hidden rounded-[24px] bg-cream backdrop-blur-md shadow-2xl transition-all duration-500 hover:scale-[1.01]"
                   style={{ 
                     border: `1px solid ${accent}25`,
                     boxShadow: `0 20px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px ${accent}15`

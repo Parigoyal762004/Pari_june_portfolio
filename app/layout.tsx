@@ -4,12 +4,12 @@ import JsonLd from "@/components/JsonLd";
 import Nav from "@/components/Nav";
 
 const description =
-  "Pari Goyal is a Computer Science student and AI automation builder who ships agentic workflows that get used in production, across marketing, lead generation, and operations for real clients.";
+  "Pari Goyal helps early-stage companies raise capital and scale from zero. Closed a fundraising mandate worth up to ₹20 crore, builds GTM systems from scratch, and ships agentic AI to production. Open to GTM, BD, and founder's office roles.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://parigoyal.com"),
   title: {
-    default: "Pari Goyal | AI Automation, Agentic Workflows, Product and Growth",
+    default: "Pari Goyal | Capital, GTM, and AI Automation",
     template: "%s | Pari Goyal",
   },
   description,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   creator: "Pari Goyal",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Pari Goyal | Building systems, not just outputs",
+    title: "Pari Goyal | Capital, GTM, and AI Automation",
     description,
     url: "https://parigoyal.com",
     siteName: "Pari Goyal",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pari Goyal | Building systems, not just outputs",
+    title: "Pari Goyal | Capital, GTM, and AI Automation",
     description,
     images: ["/media/images/og-banner.png"],
   },

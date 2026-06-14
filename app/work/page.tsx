@@ -29,13 +29,13 @@ export default function WorkIndex() {
             <Reveal key={p.slug} delay={i * 60}>
               <Link
                 href={`/work/${p.slug}`}
-                className="group grid grid-cols-1 items-center gap-6 border border-white/5 bg-white/[0.02] rounded-2xl p-6 md:p-8 backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.04] hover:border-teal/30 hover:shadow-[0_8px_30px_rgba(10,211,232,0.1)] md:grid-cols-[4rem_1.4fr_1fr_2rem]"
+                className="group grid grid-cols-1 items-center gap-6 border border-ink/10 bg-cream/40 rounded-2xl p-6 md:p-8 backdrop-blur-sm transition-all duration-300 hover:bg-cream/60 hover:border-teal/30 hover:shadow-[0_8px_30px_rgba(95,199,164,0.12)] md:grid-cols-[4rem_1.4fr_1fr_2rem]"
               >
                 <span className="font-display text-2xl text-teal font-semibold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h2 className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] leading-tight text-white group-hover:text-teal transition-colors">
+                  <h2 className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] leading-tight text-ink group-hover:text-teal transition-colors">
                     {p.title}
                   </h2>
                   <p className="mt-1.5 text-xs font-semibold tracking-wider uppercase opacity-80" style={{ color: p.accent }}>
@@ -43,7 +43,7 @@ export default function WorkIndex() {
                   </p>
                 </div>
                 <p className="text-[0.97rem] text-ink-soft leading-relaxed">{p.tagline}</p>
-                <span className="hidden text-2xl text-ink-soft transition-all duration-300 group-hover:translate-x-1.5 group-hover:text-white md:block">
+                <span className="hidden text-2xl text-ink-soft transition-all duration-300 group-hover:translate-x-1.5 group-hover:text-ink md:block">
                   &rarr;
                 </span>
               </Link>

@@ -4,18 +4,18 @@ import { projects } from "@/lib/projects";
 const panels: Panel[] = [
   {
     id: "intro",
-    eyebrow: "AI automation / agentic workflows / product",
-    heading: "I build systems that quietly do the work.",
-    body: "Agentic AI shipped to real clients. Not demos, not dashboards nobody opens.",
+    eyebrow: "Capital · GTM · AI automation",
+    heading: "I figure it out, then I build it.",
+    body: "I think in conversations, move in decisions, and ship in code. Real mandates closed, real systems running in production, usually before anyone asked twice.",
     anim: "/media/animations/01-hero-murmuration.gif",
     alt: "A murmuration of many small birds turning together and briefly forming an ordered pattern",
     cue: true,
   },
   {
     id: "approach",
-    eyebrow: "What I do",
-    heading: "Three lanes, one operator.",
-    body: "AI automation, product, and growth. I think in outcomes, not features, so I care what actually changed: a deal sourced, a week of work removed, a conversation booked. Most problems sit between the lanes, and I am comfortable owning the whole stretch and making the calls.",
+    eyebrow: "How I work",
+    heading: "Three modes, one person.",
+    body: "I think in conversations, move in decisions, and ship in code. Most problems sit in the gap between strategy and execution, and I am comfortable owning the whole stretch, the hard calls included.",
     anim: "/media/animations/03-skills-loom.gif",
     alt: "A loom weaving many colored threads into a single patterned cloth",
   },
@@ -36,8 +36,8 @@ const panels: Panel[] = [
   {
     id: "experience",
     eyebrow: "Experience",
-    heading: "From one seed, a whole system.",
-    body: "First hire at Akroventures, where I built a deal-flow engine that sourced multiple live deals, one worth up to twenty crore. Agentic AI at Oyelabs, automation at Halo Interiors, product at ScoutNexa.",
+    heading: "First hire. ₹20 crore mandate. Systems that run themselves.",
+    body: "At Akroventures I built the tech and GTM from zero and helped close a fundraising mandate worth up to ₹20 crore. Before that: agentic AI at Oyelabs, automation at Halo Interiors, product at ScoutNexa.",
     anim: "/media/animations/04-experience-mycelium.gif",
     alt: "Top down view of a seed dropping into soil and sending a root network outward",
     actions: [{ label: "Read the full story", href: "/about" }],
@@ -46,6 +46,7 @@ const panels: Panel[] = [
     id: "contact",
     eyebrow: "Contact",
     heading: "The next thing is not here yet. I am already moving toward it.",
+    body: "Looking for a real role at a funded startup where my thinking and my execution both matter. GTM, BD, or founder's office.",
     anim: "/media/animations/06-contact-wave.gif",
     alt: "An ocean wave drawn up and held at the moment just before it breaks",
     actions: [

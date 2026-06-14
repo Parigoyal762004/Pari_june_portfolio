@@ -7,7 +7,7 @@ export default function Footer() {
         <div>
           <p className="font-display text-2xl">Pari Goyal</p>
           <p className="mt-1 text-sm text-ink-soft">
-            Building systems, not just outputs.
+            I close deals and ship systems.
           </p>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">

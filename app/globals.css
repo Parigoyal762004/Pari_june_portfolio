@@ -19,41 +19,35 @@ body {
   position: relative;
 }
 
-/* Cyber tech grid background */
+/* Warm film grain so the dark canvas never looks flat */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.12;
-  background-size: 60px 60px;
-  background-image: 
-    linear-gradient(to right, rgba(10, 211, 232, 0.15) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(10, 211, 232, 0.15) 1px, transparent 1px);
-  mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 90%);
-  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 90%);
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMjAnIGhlaWdodD0nMTIwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC44NScgbnVtT2N0YXZlcz0nMycvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNuKScvPjwvc3ZnPg==");
 }
 
-/* Glassmorphism utility */
+/* Warm glass utility */
 .glass {
-  background: rgba(19, 26, 46, 0.45);
+  background: rgba(36, 28, 21, 0.5);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(251, 246, 238, 0.08);
 }
-
 .glass-hover {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .glass-hover:hover {
-  background: rgba(19, 26, 46, 0.75);
-  border-color: rgba(10, 211, 232, 0.3);
-  box-shadow: 0 0 30px rgba(10, 211, 232, 0.1);
+  background: rgba(36, 28, 21, 0.75);
+  border-color: rgba(95, 199, 164, 0.35);
+  box-shadow: 0 0 30px rgba(95, 199, 164, 0.12);
   transform: translateY(-2px);
 }
 
-/* Custom Scrollbars */
+/* Warm scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -62,11 +56,11 @@ body::before {
   background: theme("colors.paper");
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(251, 246, 238, 0.12);
   border-radius: 99px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(10, 211, 232, 0.4);
+  background: rgba(95, 199, 164, 0.45);
 }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -80,5 +74,5 @@ body::before {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .animate-pagein { animation: none; }
+  .animate-pagein, .animate-marquee, .animate-pulse-ring { animation: none; }
 }
