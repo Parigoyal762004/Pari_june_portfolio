@@ -31,36 +31,37 @@ const faqs = [
 export default function Contact() {
   return (
     <>
-      <main>
-        <section className="relative flex min-h-[60svh] items-center overflow-hidden">
+      <main className="overflow-x-hidden">
+        {/* HERO · full-height prism ──────────────────────── */}
+        <section className="relative flex min-h-[100svh] items-center overflow-hidden">
           <img
-            src="/media/animations/06-contact-wave.gif"
-            alt="An ocean wave drawn up and held at the moment just before it breaks"
+            src="/media/animations/05-projects-prism.gif"
+            alt="A glass prism splitting a beam of white light into a band of colors"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/85 to-paper/40" />
-          <Reveal className="relative z-10 mx-auto w-full max-w-content px-[clamp(20px,5vw,64px)] pt-24">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal">
+          <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/85 to-paper/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-paper/65 via-transparent to-paper/25" />
+          <Reveal className="relative z-10 mx-auto w-full max-w-content px-[clamp(20px,5vw,64px)] pt-20">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ink-soft">
               Contact
             </p>
-            <h1 className="my-5 max-w-[20ch] font-display text-[clamp(2.4rem,6vw,4.6rem)] font-normal leading-[1.02] tracking-tight">
+            <h1 className="mt-6 max-w-[20ch] font-display text-[clamp(2.8rem,8vw,6rem)] font-normal leading-[0.92] tracking-tight">
               The next thing is not here yet. I am already moving toward it.
             </h1>
-            <p className="max-w-[46ch] text-[clamp(1.05rem,2vw,1.35rem)] text-ink-soft">
+            <p className="mt-8 max-w-[48ch] text-[clamp(1.15rem,2.2vw,1.45rem)] text-ink/80">
               B.E. Computer Science, Thapar Institute, graduating 2026. Looking
               for a funded startup where my thinking and execution both matter.
-              GTM, BD, or founder's office.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3.5">
+            <div className="mt-9 flex flex-wrap gap-3">
               <a
                 href="mailto:goyalpari70@gmail.com"
-                className="rounded-full bg-teal px-6 py-3.5 text-sm font-semibold text-paper transition-all duration-300 shadow-soft hover:bg-ink hover:text-paper hover:-translate-y-0.5"
+                className="rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5"
               >
                 goyalpari70@gmail.com
               </a>
               <a
                 href="tel:+916284013296"
-                className="rounded-full border border-ink/20 bg-cream/50 px-6 py-3.5 text-sm font-semibold transition-all duration-300 hover:bg-cream hover:border-ink/40 hover:-translate-y-0.5"
+                className="rounded-full border-[1.5px] border-ink px-7 py-3.5 text-sm font-semibold transition-transform hover:-translate-y-0.5"
               >
                 +91 62840 13296
               </a>
@@ -68,20 +69,21 @@ export default function Contact() {
                 href="/Pari_Goyal_Resume.pdf"
                 target="_blank"
                 rel="noopener"
-                className="rounded-full border border-ink/20 bg-cream/50 px-6 py-3.5 text-sm font-semibold transition-all duration-300 hover:bg-cream hover:border-ink/40 hover:-translate-y-0.5"
+                className="rounded-full border-[1.5px] border-ink px-7 py-3.5 text-sm font-semibold transition-transform hover:-translate-y-0.5"
               >
-                Download resume
+                Resume
               </a>
             </div>
           </Reveal>
         </section>
 
-        <section className="px-[clamp(20px,5vw,64px)] py-20">
+        {/* FAQ · accordion ───────────────────────────────── */}
+        <section className="bg-paper-2 px-[clamp(20px,5vw,64px)] py-24">
           <Reveal className="mx-auto max-w-content">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ink-soft">
               FAQ
             </p>
-            <h2 className="mb-10 mt-3 font-display text-[clamp(2rem,5vw,3.2rem)] font-normal leading-[1.04]">
+            <h2 className="mb-10 mt-3 font-display text-[clamp(2rem,5vw,3.4rem)] font-normal leading-[1.04]">
               The short answers.
             </h2>
             <div className="grid gap-0">
@@ -90,15 +92,13 @@ export default function Contact() {
                   key={f.q}
                   className="group border-t border-ink/15 py-6 last:border-b"
                 >
-                  <summary className="flex cursor-pointer list-none items-center justify-between font-display text-[clamp(1.15rem,2.6vw,1.55rem)] hover:text-teal transition-colors">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-display text-[clamp(1.2rem,2.8vw,1.7rem)] transition-colors hover:text-coral">
                     {f.q}
-                    <span className="text-xl text-teal transition-transform group-open:rotate-45 font-semibold">
+                    <span className="shrink-0 text-xl text-coral transition-transform group-open:rotate-45">
                       +
                     </span>
                   </summary>
-                  <p className="mt-3 max-w-[65ch] text-ink-soft text-sm leading-relaxed">
-                    {f.a}
-                  </p>
+                  <p className="mt-3 max-w-[65ch] text-ink-soft">{f.a}</p>
                 </details>
               ))}
             </div>
