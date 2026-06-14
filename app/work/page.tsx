@@ -18,17 +18,17 @@ export default function WorkIndex() {
         {/* HERO · full-height prism ──────────────────────── */}
         <section className="relative flex min-h-[100svh] items-center overflow-hidden">
           <img
-            src="/media/animations/05-projects-prism.gif"
-            alt="A glass prism splitting a beam of white light into a band of colors"
+            src="/media/animations/04-experience-mycelium.gif"
+            alt="A seed sending a branching root network outward through soil"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/85 to-paper/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-paper/65 via-transparent to-paper/25" />
+          <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/88 to-paper/45" />
+          <div className="absolute inset-0 bg-gradient-to-t from-paper/70 via-transparent to-paper/25" />
           <Reveal className="relative z-10 mx-auto w-full max-w-content px-[clamp(20px,5vw,64px)] pt-20">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ink-soft">
               Selected work
             </p>
-            <h1 className="mt-6 max-w-[18ch] font-display text-[clamp(3rem,9vw,7rem)] font-normal leading-[0.9] tracking-tight">
+            <h1 className="mt-6 max-w-[18ch] font-display text-[clamp(2.3rem,8vw,7rem)] font-normal leading-[0.95] tracking-tight">
               Each one took a manual mess and made it run on its own.
             </h1>
             <p className="mt-8 max-w-[44ch] text-[clamp(1.15rem,2.2vw,1.5rem)] text-ink/80">

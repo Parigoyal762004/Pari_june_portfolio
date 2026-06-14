@@ -84,17 +84,17 @@ export default function About() {
         {/* HERO · full-height prism ──────────────────────── */}
         <section className="relative flex min-h-[100svh] items-center overflow-hidden">
           <img
-            src="/media/animations/05-projects-prism.gif"
-            alt="A glass prism splitting a beam of white light into a band of colors"
+            src="/media/animations/06-contact-wave.gif"
+            alt="An ocean wave drawn up and held at the moment just before it breaks"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/85 to-paper/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-paper/65 via-transparent to-paper/25" />
+          <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/88 to-paper/45" />
+          <div className="absolute inset-0 bg-gradient-to-t from-paper/70 via-transparent to-paper/25" />
           <Reveal className="relative z-10 mx-auto w-full max-w-content px-[clamp(20px,5vw,64px)] pt-20">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ink-soft">
               About
             </p>
-            <h1 className="mt-6 max-w-[16ch] font-display text-[clamp(2.8rem,8vw,6rem)] font-normal leading-[0.92] tracking-tight">
+            <h1 className="mt-6 max-w-[16ch] font-display text-[clamp(2.2rem,7.5vw,6rem)] font-normal leading-[0.95] tracking-tight">
               I figure things out, move fast, and close what I start.
             </h1>
             <p className="mt-8 max-w-[50ch] text-[clamp(1.15rem,2.2vw,1.45rem)] text-ink/80">

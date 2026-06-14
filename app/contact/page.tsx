@@ -32,27 +32,27 @@ export default function Contact() {
   return (
     <>
       <main className="overflow-x-hidden">
-        {/* HERO · full-height prism ──────────────────────── */}
-        <section className="relative flex min-h-[100svh] items-center overflow-hidden">
+        {/* HERO · full-height kintsugi ───────────────────── */}
+        <section className="relative flex min-h-[100svh] items-center overflow-hidden py-28">
           <img
-            src="/media/animations/05-projects-prism.gif"
-            alt="A glass prism splitting a beam of white light into a band of colors"
+            src="/media/animations/02-about-kintsugi.gif"
+            alt="Broken ceramic pieces rejoining with the cracks filled in gold, in the style of kintsugi"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/85 to-paper/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-paper/65 via-transparent to-paper/25" />
-          <Reveal className="relative z-10 mx-auto w-full max-w-content px-[clamp(20px,5vw,64px)] pt-20">
+          <div className="absolute inset-0 bg-gradient-to-r from-paper via-paper/90 to-paper/50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-paper/75 via-transparent to-paper/30" />
+          <Reveal className="relative z-10 mx-auto w-full max-w-content px-[clamp(20px,5vw,64px)]">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-ink-soft">
               Contact
             </p>
-            <h1 className="mt-6 max-w-[20ch] font-display text-[clamp(2.8rem,8vw,6rem)] font-normal leading-[0.92] tracking-tight">
+            <h1 className="mt-5 max-w-[18ch] font-display text-[clamp(2rem,6.5vw,4.6rem)] font-normal leading-[1] tracking-tight">
               The next thing is not here yet. I am already moving toward it.
             </h1>
-            <p className="mt-8 max-w-[48ch] text-[clamp(1.15rem,2.2vw,1.45rem)] text-ink/80">
+            <p className="mt-6 max-w-[48ch] text-[clamp(1.05rem,2vw,1.35rem)] text-ink/80">
               B.E. Computer Science, Thapar Institute, graduating 2026. Looking
               for a funded startup where my thinking and execution both matter.
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="mailto:goyalpari70@gmail.com"
                 className="rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5"

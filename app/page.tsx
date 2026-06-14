@@ -41,7 +41,7 @@ export default function Home() {
               <span className="h-3 w-px bg-ink/30" />
               <span>AI automation</span>
             </p>
-            <h1 className="mt-6 max-w-[16ch] font-display text-[clamp(3.2rem,10vw,7.5rem)] font-normal leading-[0.9] tracking-tight">
+            <h1 className="mt-6 max-w-[16ch] font-display text-[clamp(2.4rem,9vw,7.5rem)] font-normal leading-[0.92] tracking-tight">
               I figure it out, then I build it.
             </h1>
             <p className="mt-8 max-w-[46ch] text-[clamp(1.15rem,2.2vw,1.5rem)] text-ink/80">
@@ -97,7 +97,7 @@ export default function Home() {
             {modes.map((m, i) => (
               <Reveal key={m.n} delay={i * 90}>
                 <p
-                  className="flex items-baseline gap-4 font-display text-[clamp(2.2rem,8vw,5.5rem)] font-normal leading-[1.08] tracking-tight md:gap-8"
+                  className="flex items-baseline gap-3 font-display text-[clamp(1.7rem,7.5vw,5.5rem)] font-normal leading-[1.08] tracking-tight md:gap-8"
                   style={{ color: m.color }}
                 >
                   <span className="text-[0.32em] tabular-nums text-ink-soft">
@@ -197,7 +197,7 @@ export default function Home() {
         {/* 5 — EXPERIENCE · giant pull-figure ───────────── */}
         <section className="px-[clamp(20px,5vw,64px)] py-28">
           <Reveal className="mx-auto grid max-w-content items-center gap-x-12 gap-y-6 md:grid-cols-[auto_1fr]">
-            <p className="font-display text-[clamp(4.5rem,16vw,11rem)] leading-[0.85] tracking-tight text-coral">
+            <p className="font-display text-[clamp(3.4rem,15vw,11rem)] leading-[0.85] tracking-tight text-coral">
               ₹20<span className="block text-[0.42em] text-ink">crore</span>
             </p>
             <div>
@@ -225,7 +225,7 @@ export default function Home() {
         {/* 6 — CONTACT · color-block finale ─────────────── */}
         <section className="bg-coral px-[clamp(20px,5vw,64px)] py-28 text-paper">
           <Reveal className="mx-auto max-w-content">
-            <h2 className="max-w-[18ch] font-display text-[clamp(2.6rem,7vw,5rem)] font-normal leading-[0.98]">
+            <h2 className="max-w-[18ch] font-display text-[clamp(2rem,7vw,5rem)] font-normal leading-[1]">
               The next thing is not here yet. I am already moving toward it.
             </h2>
             <p className="mt-6 max-w-[44ch] text-[clamp(1.1rem,2vw,1.35rem)] text-paper/90">
