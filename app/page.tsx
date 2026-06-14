@@ -4,15 +4,6 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import { projects } from "@/lib/projects";
 
-const marquee = [
-  "Fundraising mandates",
-  "Deal-flow systems",
-  "GTM from zero",
-  "AI automation",
-  "Outreach engines",
-  "Systems that run themselves",
-];
-
 const modes = [
   {
     n: "01",
@@ -46,27 +37,16 @@ export default function Home() {
     <>
       <main className="overflow-x-hidden">
         {/* 1 — HERO ─────────────────────────────────────── */}
-        <section className="px-[clamp(20px,5vw,64px)] pb-20 pt-36 md:pt-44">
-          <div className="mx-auto max-w-content">
+        <section className="px-[clamp(20px,5vw,64px)] pb-20 pt-32 md:pt-40">
+          <div className="mx-auto grid max-w-content items-center gap-[clamp(28px,5vw,64px)] md:grid-cols-[1.05fr_0.95fr]">
             <Reveal>
-              <span className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-cream/60 px-3 py-1 text-xs font-semibold tracking-wide">
-                <span className="h-2 w-2 rounded-full bg-teal animate-pulse" />
-                Open to roles
-              </span>
-              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.28em] text-ink-soft">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-ink-soft">
                 Capital · GTM · AI automation
               </p>
-              <h1 className="mt-4 max-w-[15ch] font-display text-[clamp(3rem,9vw,7rem)] font-normal leading-[0.92] tracking-tight">
-                I figure it out,
-                <br />
-                then I{" "}
-                <span className="relative whitespace-nowrap">
-                  build it
-                  <span className="absolute inset-x-0 bottom-1 -z-0 h-3 bg-golden/70" />
-                </span>
-                .
+              <h1 className="mt-4 font-display text-[clamp(2.9rem,7.5vw,5.6rem)] font-normal leading-[0.95] tracking-tight">
+                I figure it out, then I build it.
               </h1>
-              <p className="mt-7 max-w-[46ch] text-[clamp(1.1rem,2vw,1.4rem)] text-ink-soft">
+              <p className="mt-7 max-w-[44ch] text-[clamp(1.1rem,2vw,1.35rem)] text-ink-soft">
                 I think in conversations, move in decisions, and ship in code.
                 Real mandates closed, real systems running in production.
               </p>
@@ -87,21 +67,18 @@ export default function Home() {
                 </a>
               </div>
             </Reveal>
-          </div>
-        </section>
-
-        {/* 2 — MARQUEE ──────────────────────────────────── */}
-        <section className="border-y border-ink/15 bg-ink py-5 text-paper">
-          <div className="flex w-max animate-marquee gap-10 whitespace-nowrap will-change-transform">
-            {[...marquee, ...marquee].map((m, i) => (
-              <span
-                key={i}
-                className="flex items-center gap-10 font-display text-[clamp(1.4rem,3vw,2.2rem)]"
-              >
-                {m}
-                <span className="text-coral">✳</span>
-              </span>
-            ))}
+            <Reveal delay={120}>
+              <div className="relative overflow-hidden rounded-[28px] border border-ink/12 bg-cream/40">
+                <img
+                  src="/media/animations/01-hero-murmuration.gif"
+                  alt="A murmuration of small birds turning together and briefly forming an ordered pattern"
+                  className="aspect-[4/5] w-full object-cover"
+                />
+                <span className="absolute bottom-4 left-4 rounded-full bg-paper/85 px-3 py-1 text-xs font-medium text-ink backdrop-blur-sm">
+                  Order out of many small parts
+                </span>
+              </div>
+            </Reveal>
           </div>
         </section>
 
