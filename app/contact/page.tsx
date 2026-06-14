@@ -38,12 +38,12 @@ export default function Contact() {
             alt="An ocean wave drawn up and held at the moment just before it breaks"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-paper/55" />
+          <div className="absolute inset-0 bg-paper/65 backdrop-blur-[2px]" />
           <Reveal className="relative z-10 mx-auto w-full max-w-content px-[clamp(20px,5vw,64px)] pt-24">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-ink-soft">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal">
               Contact
             </p>
-            <h1 className="my-4 max-w-[20ch] font-display text-[clamp(2.4rem,6vw,4.6rem)] font-normal leading-[1.02] tracking-tight">
+            <h1 className="my-5 max-w-[20ch] font-display text-[clamp(2.4rem,6vw,4.6rem)] font-normal leading-[1.02] tracking-tight text-white">
               The next thing is not here yet. I am already moving toward it.
             </h1>
             <p className="max-w-[44ch] text-[clamp(1.05rem,2vw,1.35rem)] text-ink-soft">
@@ -51,16 +51,16 @@ export default function Contact() {
               Engineering and Technology, graduating 2026. Open to roles in AI
               automation, product, and growth.
             </p>
-            <div className="mt-7 flex flex-wrap gap-3.5">
+            <div className="mt-8 flex flex-wrap gap-3.5">
               <a
                 href="mailto:goyalpari70@gmail.com"
-                className="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5 hover:shadow-soft"
+                className="rounded-full bg-teal px-6 py-3.5 text-sm font-semibold text-paper transition-all duration-300 shadow-[0_4px_20px_rgba(10,211,232,0.25)] hover:shadow-[0_4px_25px_rgba(10,211,232,0.45)] hover:bg-white hover:text-paper hover:-translate-y-0.5"
               >
                 goyalpari70@gmail.com
               </a>
               <a
                 href="tel:+916284013296"
-                className="rounded-full border-[1.5px] border-ink px-6 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5"
+                className="rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:-translate-y-0.5"
               >
                 +91 62840 13296
               </a>
@@ -68,7 +68,7 @@ export default function Contact() {
                 href="/Pari_Goyal_Resume.pdf"
                 target="_blank"
                 rel="noopener"
-                className="rounded-full border-[1.5px] border-ink px-6 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5"
+                className="rounded-full border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:-translate-y-0.5"
               >
                 Download resume
               </a>
@@ -78,25 +78,25 @@ export default function Contact() {
 
         <section className="px-[clamp(20px,5vw,64px)] py-20">
           <Reveal className="mx-auto max-w-content">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-ink-soft">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal">
               FAQ
             </p>
-            <h2 className="mb-8 mt-3 font-display text-[clamp(2rem,5vw,3.2rem)] font-normal leading-[1.04]">
+            <h2 className="mb-10 mt-3 font-display text-[clamp(2rem,5vw,3.2rem)] font-normal leading-[1.04] text-white">
               The short answers.
             </h2>
             <div className="grid gap-0">
               {faqs.map((f) => (
                 <details
                   key={f.q}
-                  className="group border-t border-ink/15 py-5 last:border-b"
+                  className="group border-t border-white/10 py-6 last:border-b"
                 >
-                  <summary className="flex cursor-pointer list-none items-center justify-between font-display text-[clamp(1.2rem,2.6vw,1.7rem)]">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-display text-[clamp(1.15rem,2.6vw,1.55rem)] text-white hover:text-teal transition-colors">
                     {f.q}
-                    <span className="text-xl text-ink-soft transition-transform group-open:rotate-45">
+                    <span className="text-xl text-teal transition-transform group-open:rotate-45 font-semibold">
                       +
                     </span>
                   </summary>
-                  <p className="mt-3 max-w-[60ch] text-ink-soft">{f.a}</p>
+                  <p className="mt-3 max-w-[65ch] text-ink-soft text-sm leading-relaxed">{f.a}</p>
                 </details>
               ))}
             </div>

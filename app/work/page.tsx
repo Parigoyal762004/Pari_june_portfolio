@@ -24,26 +24,26 @@ export default function WorkIndex() {
           </h1>
         </Reveal>
 
-        <div className="mx-auto mt-14 max-w-content">
+        <div className="mx-auto mt-16 max-w-content space-y-4">
           {projects.map((p, i) => (
             <Reveal key={p.slug} delay={i * 60}>
               <Link
                 href={`/work/${p.slug}`}
-                className="group grid grid-cols-1 items-center gap-6 border-t border-ink/15 py-8 last:border-b md:grid-cols-[8rem_1.4fr_1fr_2rem]"
+                className="group grid grid-cols-1 items-center gap-6 border border-white/5 bg-white/[0.02] rounded-2xl p-6 md:p-8 backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.04] hover:border-teal/30 hover:shadow-[0_8px_30px_rgba(10,211,232,0.1)] md:grid-cols-[4rem_1.4fr_1fr_2rem]"
               >
-                <span className="font-display text-2xl text-ink-soft">
+                <span className="font-display text-2xl text-teal font-semibold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h2 className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] leading-tight">
+                  <h2 className="font-display text-[clamp(1.6rem,3.5vw,2.4rem)] leading-tight text-white group-hover:text-teal transition-colors">
                     {p.title}
                   </h2>
-                  <p className="mt-1 text-sm text-ink-soft">
-                    {p.org}, {p.year}
+                  <p className="mt-1.5 text-xs font-semibold tracking-wider uppercase opacity-80" style={{ color: p.accent }}>
+                    {p.org} &bull; {p.year}
                   </p>
                 </div>
-                <p className="text-[0.97rem] text-ink-soft">{p.tagline}</p>
-                <span className="hidden text-2xl transition-transform group-hover:translate-x-1 md:block">
+                <p className="text-[0.97rem] text-ink-soft leading-relaxed">{p.tagline}</p>
+                <span className="hidden text-2xl text-ink-soft transition-all duration-300 group-hover:translate-x-1.5 group-hover:text-white md:block">
                   &rarr;
                 </span>
               </Link>

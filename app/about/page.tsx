@@ -77,31 +77,31 @@ export default function About() {
       <main>
         <section className="px-[clamp(20px,5vw,64px)] pb-16 pt-32">
           <Reveal className="mx-auto grid max-w-content items-center gap-[clamp(32px,6vw,80px)] md:grid-cols-2">
-            <div className="overflow-hidden rounded-[18px] bg-cream shadow-soft">
+            <div className="overflow-hidden rounded-[24px] bg-slate-950/40 border border-white/10 shadow-2xl backdrop-blur-md transition-all duration-500 hover:border-teal/30 hover:scale-[1.01]">
               <img
                 src="/media/images/about-portrait.png"
                 alt="Illustrated portrait of Pari Goyal with a root system spreading outward behind her"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
               />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-ink-soft">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal">
                 About
               </p>
-              <h1 className="my-4 font-display text-[clamp(2.2rem,5.5vw,3.8rem)] font-normal leading-[1.04]">
+              <h1 className="my-5 font-display text-[clamp(2.2rem,5.5vw,3.8rem)] font-normal leading-[1.04] text-white">
                 I do not get stuck in one corner of a problem.
               </h1>
-              <p className="mb-4 text-[clamp(1.05rem,2vw,1.3rem)] text-ink-soft">
+              <p className="mb-5 text-[clamp(1.05rem,2vw,1.3rem)] text-ink-soft leading-relaxed font-light">
                 I am a final-year Computer Science student, but the part that
                 matters is what I have shipped: agentic AI systems that real
                 teams depend on every day, across product, marketing, sourcing,
                 and operations.
               </p>
-              <p>
+              <p className="text-ink-soft/90 leading-relaxed font-light">
                 I think in outcomes, not features. I care what changed because of
-                the thing I built, a deal sourced, a week of work removed, a
+                the thing I built: a deal sourced, a week of work removed, a
                 conversation booked. I make the calls on what to build and what
-                to cut, I am comfortable making the case to founders and
+                to cut. I am comfortable making the case to founders and
                 leadership, and I would rather ask the dumb question in the room
                 than ship the wrong thing.
               </p>
@@ -115,73 +115,89 @@ export default function About() {
             alt="Broken ceramic pieces rejoining with the cracks filled in gold, in the style of kintsugi"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-paper/45" />
+          <div className="absolute inset-0 bg-paper/60 backdrop-blur-[1px]" />
           <div className="relative z-10 mx-auto flex h-full max-w-content items-center px-[clamp(20px,5vw,64px)]">
-            <p className="max-w-[30ch] font-display text-[clamp(1.4rem,3.4vw,2.4rem)] leading-tight">
+            <p className="max-w-[30ch] font-display text-[clamp(1.4rem,3.4vw,2.4rem)] leading-tight text-white">
               Like kintsugi, the things I have broken and rebuilt are the parts I
               am proudest of.
             </p>
           </div>
         </section>
 
-        <section className="px-[clamp(20px,5vw,64px)] py-20">
+        <section className="px-[clamp(20px,5vw,64px)] py-20 relative">
           <Reveal className="mx-auto max-w-content">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-ink-soft">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal">
               Experience
             </p>
-            <h2 className="mb-10 mt-3 max-w-[20ch] font-display text-[clamp(2rem,5vw,3.4rem)] font-normal leading-[1.04]">
+            <h2 className="mb-14 mt-3 max-w-[20ch] font-display text-[clamp(2rem,5vw,3.4rem)] font-normal leading-[1.04] text-white">
               Four rooms, four problems, the same instinct.
             </h2>
           </Reveal>
-          <div className="mx-auto max-w-content">
-            {roles.map((r, i) => (
-              <Reveal key={r.org} delay={i * 50}>
-                <article className="grid grid-cols-1 gap-4 border-t border-ink/15 py-9 last:border-b md:grid-cols-[1fr_2fr]">
-                  <div>
-                    <h3 className="font-display text-[clamp(1.4rem,3vw,2rem)] leading-tight">
-                      {r.title}
-                    </h3>
-                    <p className="mt-1 text-sm text-ink-soft">
-                      {r.org}, {r.dates}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="mb-3 font-display text-lg text-plum">
-                      {r.lead}
-                    </p>
-                    <ul className="grid list-disc gap-2 pl-5 text-ink-soft">
-                      {r.points.map((pt, j) => (
-                        <li key={j}>{pt}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
+          
+          <div className="mx-auto max-w-content relative border-l border-white/10 pl-6 md:pl-10 ml-2 md:ml-4 space-y-10">
+            {roles.map((r, i) => {
+              const accents = ["#0AD3E8", "#FF2E93", "#8B5CF6", "#FBBF24"];
+              const roleAccent = accents[i % accents.length];
+              return (
+                <Reveal key={r.org} delay={i * 50} className="relative">
+                  <span 
+                    className="absolute -left-[31px] md:-left-[47px] top-2.5 h-4 w-4 rounded-full border-[3px] border-paper z-20 transition-all duration-300 hover:scale-125"
+                    style={{ 
+                      backgroundColor: roleAccent,
+                      boxShadow: `0 0 10px ${roleAccent}`
+                    }}
+                  />
+                  
+                  <article className="grid grid-cols-1 gap-4 md:grid-cols-[1fr_2fr] bg-white/[0.02] border border-white/5 p-6 md:p-8 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:border-white/10 hover:bg-white/[0.04] hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
+                    <div>
+                      <h3 className="font-display text-[clamp(1.3rem,2.5vw,1.75rem)] leading-tight text-white">
+                        {r.title}
+                      </h3>
+                      <p className="mt-1 text-sm font-semibold tracking-wide" style={{ color: roleAccent }}>
+                        {r.org}
+                      </p>
+                      <p className="mt-2 text-xs text-ink-soft">
+                        {r.dates}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="mb-3 font-display text-lg text-plum font-medium">
+                        {r.lead}
+                      </p>
+                      <ul className="grid list-disc gap-2 pl-5 text-ink-soft text-sm leading-relaxed">
+                        {r.points.map((pt, j) => (
+                          <li key={j}>{pt}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </article>
+                </Reveal>
+              );
+            })}
           </div>
         </section>
 
-        <section className="bg-paper-2 px-[clamp(20px,5vw,64px)] py-20">
+        <section className="bg-paper-2 px-[clamp(20px,5vw,64px)] py-20 border-t border-white/5">
           <Reveal className="mx-auto grid max-w-content items-center gap-[clamp(32px,6vw,80px)] md:grid-cols-2">
-            <div className="overflow-hidden rounded-[18px] bg-cream shadow-soft">
+            <div className="overflow-hidden rounded-[24px] bg-slate-950/40 border border-white/10 shadow-2xl backdrop-blur-md transition-all duration-500 hover:border-teal/30 hover:scale-[1.01]">
               <img
                 src="/media/images/project-scoutnexa-boat.png"
                 alt="A small paper boat at the tideline, partly dissolving into the sand with ripples trailing behind it"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity"
               />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-ink-soft">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal">
                 What early stage taught me
               </p>
-              <h2 className="my-3 font-display text-[clamp(2rem,5vw,3.2rem)] font-normal leading-[1.04]">
+              <h2 className="my-3 font-display text-[clamp(2rem,5vw,3.2rem)] font-normal leading-[1.04] text-white">
                 The boat still left ripples.
               </h2>
-              <div className="mt-4 grid gap-6">
+              <div className="mt-6 grid gap-6">
                 {lessons.map((l) => (
-                  <div key={l.title} className="border-t border-ink/15 pt-4">
-                    <h3 className="font-display text-xl">{l.title}</h3>
-                    <p className="mt-1 text-ink-soft">{l.body}</p>
+                  <div key={l.title} className="border-t border-white/10 pt-4">
+                    <h3 className="font-display text-xl text-white">{l.title}</h3>
+                    <p className="mt-1.5 text-ink-soft text-sm leading-relaxed font-light">{l.body}</p>
                   </div>
                 ))}
               </div>

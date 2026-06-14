@@ -74,32 +74,32 @@ export default function CaseStudy({ params }: { params: { slug: string } }) {
         </section>
 
         <section className="px-[clamp(20px,5vw,64px)] py-20">
-          <div className="mx-auto grid max-w-content gap-12 md:grid-cols-[1fr_2fr]">
-            <div className="md:sticky md:top-28 md:self-start">
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-ink-soft">
+          <div className="mx-auto grid max-w-content gap-12 md:grid-cols-[1fr_2.2fr]">
+            <div className="md:sticky md:top-28 md:self-start bg-white/[0.02] border border-white/5 p-6 rounded-2xl backdrop-blur-sm">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal">
                 Stack
               </p>
-              <ul className="mt-3 flex flex-wrap gap-2">
+              <ul className="mt-4 flex flex-wrap gap-2">
                 {p.stack.map((s) => (
                   <li
                     key={s}
-                    className="rounded-full border border-ink/15 px-3 py-1 text-sm"
+                    className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs text-white tracking-wide transition-all hover:border-teal/50 hover:bg-white/[0.08]"
                   >
                     {s}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="grid gap-10">
+            <div className="grid gap-12">
               {blocks.map((b) => (
-                <Reveal key={b.label}>
+                <Reveal key={b.label} className="bg-white/[0.01] border border-white/5 p-6 md:p-8 rounded-2xl">
                   <p
                     className="text-xs font-semibold uppercase tracking-[0.24em]"
                     style={{ color: p.accent }}
                   >
                     {b.label}
                   </p>
-                  <p className="mt-3 text-[clamp(1.15rem,2.2vw,1.5rem)] leading-relaxed">
+                  <p className="mt-4 text-[clamp(1.1rem,2vw,1.35rem)] leading-relaxed text-ink/90 font-light">
                     {b.text}
                   </p>
                 </Reveal>
@@ -108,20 +108,20 @@ export default function CaseStudy({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
-        <section className="border-t border-ink/15 px-[clamp(20px,5vw,64px)] py-16">
+        <section className="border-t border-white/10 px-[clamp(20px,5vw,64px)] py-16">
           <Link
             href={`/work/${next.slug}`}
-            className="group mx-auto flex max-w-content items-end justify-between gap-6"
+            className="group mx-auto flex max-w-content items-center justify-between gap-6 bg-white/[0.02] border border-white/5 p-6 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.04] hover:border-teal/30 hover:shadow-[0_8px_30px_rgba(10,211,232,0.1)]"
           >
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-ink-soft">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal">
                 Next project
               </p>
-              <p className="mt-2 font-display text-[clamp(1.8rem,4vw,3rem)] leading-tight">
+              <p className="mt-2 font-display text-[clamp(1.8rem,4vw,3.2rem)] leading-tight text-white group-hover:text-teal transition-colors">
                 {next.title}
               </p>
             </div>
-            <span className="text-3xl transition-transform group-hover:translate-x-1">
+            <span className="text-3xl text-ink-soft transition-all duration-300 group-hover:translate-x-2 group-hover:text-white">
               &rarr;
             </span>
           </Link>

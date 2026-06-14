@@ -72,10 +72,17 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-body leading-relaxed">
-        <JsonLd />
-        <Nav />
-        {children}
+      <body className="font-body leading-relaxed bg-paper text-ink relative min-h-screen overflow-x-hidden">
+        {/* Ambient background glows */}
+        <div className="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-teal/5 blur-[120px] pointer-events-none z-0" />
+        <div className="fixed bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-coral/5 blur-[120px] pointer-events-none z-0" />
+        <div className="fixed top-[40%] right-[10%] w-[35vw] h-[35vw] rounded-full bg-lavender/5 blur-[120px] pointer-events-none z-0" />
+
+        <div className="relative z-10">
+          <JsonLd />
+          <Nav />
+          {children}
+        </div>
       </body>
     </html>
   );
