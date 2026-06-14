@@ -8,20 +8,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Akro palette, tuned for a dark-warm canvas
-        teal: "#5FC7A4",
+        // Akro palette — warm, light, flat
+        teal: "#59B292",
         golden: "#FFC94D",
-        cream: "#241C15", // warm dark card surface
+        cream: "#FAE7CB",
         coral: "#FA6781",
-        lavender: "#C7B4F0",
+        lavender: "#B9A7E0",
         mint: "#A8E0C5",
         peach: "#FFD2A8",
-        plum: "#C99AE6",
+        plum: "#6B4E7A",
         sky: "#8FCBE3",
-        ink: "#FBF6EE", // cream text
-        "ink-soft": "#A89D8B", // warm muted text
-        paper: "#171210", // deep warm near-black
-        "paper-2": "#201913", // warm dark alt section
+        ink: "#2B2620",
+        "ink-soft": "#6B6258",
+        paper: "#FBF6EE",
+        "paper-2": "#F4ECDD",
       },
       fontFamily: {
         display: ["var(--font-fraunces)", "Georgia", "serif"],
@@ -31,7 +31,7 @@ const config: Config = {
         content: "1120px",
       },
       boxShadow: {
-        soft: "0 18px 50px -24px rgba(0, 0, 0, 0.6)",
+        soft: "0 16px 44px -28px rgba(43, 38, 32, 0.28)",
       },
       keyframes: {
         "fade-up": {
@@ -42,15 +42,10 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
-        "pulse-ring": {
-          "0%": { transform: "scale(0.8)", opacity: "0.7" },
-          "100%": { transform: "scale(2.2)", opacity: "0" },
-        },
       },
       animation: {
         "fade-up": "fade-up 0.7s ease forwards",
-        marquee: "marquee 28s linear infinite",
-        "pulse-ring": "pulse-ring 1.8s ease-out infinite",
+        marquee: "marquee 32s linear infinite",
       },
     },
   },

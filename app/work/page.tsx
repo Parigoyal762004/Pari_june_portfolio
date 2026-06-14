@@ -29,7 +29,7 @@ export default function WorkIndex() {
             <Reveal key={p.slug} delay={i * 60}>
               <Link
                 href={`/work/${p.slug}`}
-                className="group grid grid-cols-1 items-center gap-6 border border-ink/10 bg-cream/40 rounded-2xl p-6 md:p-8 backdrop-blur-sm transition-all duration-300 hover:bg-cream/60 hover:border-teal/30 hover:shadow-[0_8px_30px_rgba(95,199,164,0.12)] md:grid-cols-[4rem_1.4fr_1fr_2rem]"
+                className="group grid grid-cols-1 items-center gap-6 border border-ink/12 bg-cream/40 rounded-2xl p-6 md:p-8 transition-colors duration-300 hover:bg-cream/70 hover:border-ink/30 md:grid-cols-[4rem_1.4fr_1fr_2rem]"
               >
                 <span className="font-display text-2xl text-teal font-semibold">
                   {String(i + 1).padStart(2, "0")}

@@ -83,7 +83,7 @@ export default function CaseStudy({ params }: { params: { slug: string } }) {
                 {p.stack.map((s) => (
                   <li
                     key={s}
-                    className="rounded-full border border-ink/12 bg-cream/60 px-3 py-1.5 text-xs text-ink tracking-wide transition-all hover:border-teal/50 hover:bg-cream/80"
+                    className="rounded-full border border-ink/15 bg-cream/60 px-3 py-1.5 text-xs text-ink tracking-wide transition-colors hover:border-ink/40 hover:bg-cream/90"
                   >
                     {s}
                   </li>
@@ -111,7 +111,7 @@ export default function CaseStudy({ params }: { params: { slug: string } }) {
         <section className="border-t border-ink/12 px-[clamp(20px,5vw,64px)] py-16">
           <Link
             href={`/work/${next.slug}`}
-            className="group mx-auto flex max-w-content items-center justify-between gap-6 bg-cream/40 border border-ink/10 p-6 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:bg-cream/60 hover:border-teal/30 hover:shadow-[0_8px_30px_rgba(95,199,164,0.12)]"
+            className="group mx-auto flex max-w-content items-center justify-between gap-6 bg-cream/40 border border-ink/12 p-6 rounded-2xl transition-colors duration-300 hover:bg-cream/70 hover:border-ink/30"
           >
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-teal">

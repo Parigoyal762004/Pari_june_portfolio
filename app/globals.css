@@ -30,37 +30,20 @@ body::before {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMjAnIGhlaWdodD0nMTIwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC44NScgbnVtT2N0YXZlcz0nMycvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbHRlcj0ndXJsKCNuKScvPjwvc3ZnPg==");
 }
 
-/* Warm glass utility */
-.glass {
-  background: rgba(36, 28, 21, 0.5);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(251, 246, 238, 0.08);
-}
-.glass-hover {
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.glass-hover:hover {
-  background: rgba(36, 28, 21, 0.75);
-  border-color: rgba(95, 199, 164, 0.35);
-  box-shadow: 0 0 30px rgba(95, 199, 164, 0.12);
-  transform: translateY(-2px);
-}
-
 /* Warm scrollbars */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: theme("colors.paper");
+  background: theme("colors.paper-2");
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(251, 246, 238, 0.12);
+  background: rgba(43, 38, 32, 0.18);
   border-radius: 99px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(95, 199, 164, 0.45);
+  background: rgba(43, 38, 32, 0.32);
 }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }

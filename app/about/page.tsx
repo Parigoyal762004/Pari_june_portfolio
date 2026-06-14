@@ -160,11 +160,8 @@ export default function About() {
               return (
                 <Reveal key={r.org} delay={i * 50} className="relative">
                   <span
-                    className="absolute -left-[31px] md:-left-[47px] top-2.5 h-4 w-4 rounded-full border-[3px] border-paper z-20 transition-all duration-300 hover:scale-125"
-                    style={{
-                      backgroundColor: roleAccent,
-                      boxShadow: `0 0 10px ${roleAccent}`,
-                    }}
+                    className="absolute -left-[30px] md:-left-[46px] top-2.5 h-3.5 w-3.5 rounded-full border-[3px] border-paper z-20"
+                    style={{ backgroundColor: roleAccent }}
                   />
 
                   <article className="grid grid-cols-1 gap-4 md:grid-cols-[1fr_2fr] bg-cream/60 border border-ink/10 p-6 md:p-8 rounded-2xl transition-all duration-300 hover:border-ink/20 hover:bg-cream hover:shadow-soft">
